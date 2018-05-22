@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.574817, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1351,6 +1351,7 @@ GameObject:
   - component: {fileID: 846881752}
   - component: {fileID: 846881751}
   - component: {fileID: 846881750}
+  - component: {fileID: 846881748}
   m_Layer: 0
   m_Name: main
   m_TagString: Untagged
@@ -1358,6 +1359,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &846881748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 846881747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a77d987aa2656449102caa8619b804, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floor: {fileID: 1550081889324142, guid: 4d72e74968bcff24e9a08dadb76628ff, type: 2}
+  wall: {fileID: 1765932760617804, guid: 96cf4ba5157170547afafcc7fd3b67ff, type: 2}
+  ceiling: {fileID: 1247994491833306, guid: 6912df5a243a7b044880cbcc13c110b8, type: 2}
+  startX: 0
+  startY: 0
+  startZ: 0
+  height: 0
 --- !u!114 &846881750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1369,9 +1388,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9690f9d508ddb9443bb5fb19a8fc3813, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forward: 0
   horizontal: 0
+  Mouse_X_Arr:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
   mouse_x: 0
+  Mouse_Y_Arr:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
   mouse_y: 0
   jumpBtn: 0
 --- !u!114 &846881751
@@ -2072,10 +2132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turningRate: 60
-  fwdVelThresh: 0.075
   moveSpeed: 4
-  mouse_x: 0
-  mouse_y: 0
 --- !u!54 &1936821288
 Rigidbody:
   m_ObjectHideFlags: 0

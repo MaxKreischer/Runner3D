@@ -7,7 +7,7 @@ public class CameraManager : MonoBehaviour {
     public float CameraBackShift = 1f;
     public float CameraSideShift = 2f;
     public float CameraUpShift = 0.5f;
-
+    float speed;
     private float zOffset = -0.75f;
     private Quaternion InitialCamRot;
     private Vector3 RotAngles;
@@ -19,6 +19,7 @@ public class CameraManager : MonoBehaviour {
 
     public void InitCam(ref Transform playerTf)
     {
+        speed = 10f;
         mouseMovement = new Vector3(0, 0, 0);
         circleValueX = 0;
         radius = 4.0f;
@@ -43,9 +44,9 @@ public class CameraManager : MonoBehaviour {
     {
         //Move camera such that its position --relative to the player-- stays the same
         /*
-        camOrigin = new Vector3(Mathf.Lerp(transform.position.x, playerTf.position.x, Time.deltaTime * 10f),
+        camOrigin = new Vector3(Mathf.Lerp(transform.position.x, playerTf.position.x, Time.deltaTime * speed),
                                             Mathf.Lerp(transform.position.y, playerTf.position.y + CameraUpShift, Time.deltaTime ), 
-                                            Mathf.Lerp(transform.position.z, playerTf.position.z, Time.deltaTime * 10f) );
+                                            Mathf.Lerp(transform.position.z, playerTf.position.z, Time.deltaTime *speed) );
        */
         camOrigin = new Vector3(playerTf.position.x,playerTf.position.y + CameraUpShift, playerTf.position.z);
 
